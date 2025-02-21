@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Developer Practical Task</title>
+    <link
+      href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="h-screen">
+      <nav
+        class="navbar mx-1 md:mx-10 lg:mx-32 p-4 justify-between items-center flex"
+      >
+        <img src="nav-logo.svg" alt="Logo" width="55" height="50" class="" />
+        <div class="cursor-pointer md:hidden" id="menuToggle">
+          <img src="toggle.svg" alt="toggle" width="19" height="14" />
+        </div>
+
+        <ul class="md:flex items-center gap-5 navItem hidden md:flex">
+          <li class="text-sm mr-[6px] md:mr-4 lg:mr-[95px]">About</li>
+          <li class="flex text-sm mr-[6px] md:mr-4 lg:mr-[95px]">
+            <span class="mr-2">Product Range</span>
+            <img src="small_arrow.svg" alt="SVG Image" width="4" height="4" />
+          </li>
+          <li class="text-sm mr-[6px] md:mr-4 lg:mr-[95px]">Brands</li>
+          <li class="text-sm mr-5">Contact</li>
+          <li class="hidden md:block">
+            <div class="h-10 border border-[#15161A] opacity-10 mr-5"></div>
+          </li>
+          <li>
+            <img src="serch_icon.svg" alt="SVG Image" height="40" width="40" />
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <nav
+        id="mobileMenu"
+        class="bg-[#15161A] h-[844px] md:hidden fixed top-0 left-0 w-full hidden z-50"
+      >
+        <div class="flex justify-between mx-2 p-4">
+          <img src="nav-logo.svg" alt="Logo" width="55" height="50" />
+          <img
+            src="close.svg"
+            alt="Close"
+            width="15"
+            height="15"
+            id="menuClose"
+            class="cursor-pointer"
+          />
+        </div>
+        <ul
+          class="flex flex-col items-start gap-5 mt-20 h-full text-white navItem"
+        >
+          <li
+            class="text-sm border-b-2 w-[calc(100%-2.5rem)] pb-9 border-[#EEEFF0] border-opacity-50 mx-5"
+          >
+            Home
+          </li>
+          <li
+            class="text-sm border-b-2 w-[calc(100%-2.5rem)] pb-9 border-[#EEEFF0] border-opacity-50 mx-5"
+          >
+            About
+          </li>
+
+          <li
+            class="flex justify-between text-sm border-b-2 w-[calc(100%-2.5rem)] pb-9 border-[#EEEFF0] border-opacity-50 mx-5"
+          >
+            <span class="mr-2">Product Range</span>
+            <img src="small_arrow.svg" alt="SVG Image" width="12" height="12" />
+          </li>
+          <li
+            class="text-sm border-b-2 w-[calc(100%-2.5rem)] pb-9 border-[#EEEFF0] border-opacity-50 mx-5"
+          >
+            Brands
+          </li>
+          <li
+            class="text-sm border-b-2 w-[calc(100%-2.5rem)] pb-9 border-[#EEEFF0] border-opacity-50 mx-5 mb-[193px]"
+          >
+            Contact
+          </li>
+          <li
+            class="w-[calc(100%-2.5rem)] mx-5 border border-white flex items-center h-10"
+          >
+            <span class="flex-grow mx-4">Search</span>
+            <img
+              src="serch_icon.svg"
+              alt="Search Icon"
+              height="40"
+              width="40"
+            />
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <section
+          class="h-[252px] md:h-[400px] lg:h-[652px] sliderCom relative overflow-hidden"
+        >
+          <img src="./slider_image.jpg" class="slide" alt="" />
+          <img src="./slider_image.jpg" class="slide" alt="" />
+          <img src="./slider_image.jpg" class="slide" alt="" />
+          <div
+            class="absolute bottom-0 left-0 w-full h-[400px] bg-gradient-to-t from-black/70 to-transparent"
+          ></div>
+        </section>
+        <section class="relative">
+          <h5
+            class="text-sm absolute bottom-[200px] md:bottom-[214px] lg:bottom-[354px] ml-[10px] md:ml-[50px] lg:ml-[150px] text-white font-bold w-[275px] h-[2px] md:h-[10px] lg:h-[21px]"
+          >
+            Global Poultry Equipment Suppliers
+          </h5>
+          <h1
+            class="text-base md:text-2xl lg:text-4xl absolute bottom-[30px] md:bottom-[50px] lg:bottom-[190px] ml-[10px] md:ml-[50px] lg:ml-[150px] text-white font-semibold w-[250px] md:w-[350px] lg:w-[560px] h-[144px]"
+          >
+            WebsiteNI is a proud supplier and exporter of Poultry Farming
+            Equipment to Africa.
+          </h1>
+          <button
+            class="bg-[#008E36] absolute bottom-[10px] md:bottom-[30px] lg:bottom-[100px] ml-[10px] md:ml-[50px] lg:ml-[150px] w-[100px] md:w-[140px] lg:w-[185px] h-[50px] text-[8px] md:text-xs lg:text-[12px] text-white"
+          >
+            View our Product Range
+          </button>
+        </section>
+        <section class="relative flex justify-between text-black">
+          <button
+            class="absolute bottom-[10px] md:bottom-[30px] lg:bottom-[100px] right-[100px] md:right-[150px] lg:right-[220px] h-[30px] md:h-[40px] lg:h-[50px] w-[30px] md:w-[40px] lg:w-[50px]"
+            onclick="prev()"
+          >
+            <img
+              src="B9DA6BC2-350A-4763-980C-5081CC536CFA.svg"
+              alt="SVG Image"
+              width="50"
+              height="50"
+            />
+          </button>
+          <button
+            class="absolute bottom-[10px] md:bottom-[30px] lg:bottom-[100px] right-[60px] md:right-[100px] lg:right-[150px] h-[30px] md:h-[40px] lg:h-[50px] w-[30px] md:w-[40px] lg:w-[50px]"
+            onclick="next()"
+          >
+            <img
+              src="B5EA0010-59C4-4A68-AD4F-FD315DAD9A83.svg"
+              alt="SVG Image"
+              width="50"
+              height="50"
+            />
+          </button>
+        </section>
+        <section class="h-[275px] md:h-[480px] lg:h-[739px] relative">
+          <section
+            class="bg-[linear-gradient(90deg,_#71B742,_#37A849,_#3EA544,_#1C9B47)] w-[320px] sm:w-[600px] md:w-[800px] lg:w-[1340px] h-[200px] sm:h-[250px] md:h-[350px] lg:h-[539px] absolute right-0 top-[70px] md:top-[150px] lg:top-[200px]"
+          >
+            <div
+              class="w-0 h-0 border-solid border-t-0 border-r-0 border-b-[50px] md:border-b-[100px] border-l-[50px] md:border-l-[100px] border-transparent border-l-[#008E36] absolute left-[-42px] md:left-[-80px] top-[-42px] md:top-[-80px]"
+            ></div>
+
+            <img
+              src="company-overview.jpg"
+              alt="company-overview"
+              class="ml-3.5 mt-3.5 absolute z-40 left-[-50px] md:left-[-80px] top-[-50px] md:top-[-80px] w-[150px] sm:w-[250px] md:w-[400px] lg:w-[620px] h-[100px] sm:h-[150px] md:h-[250px] lg:h-[480px]"
+            />
+            <div
+              class="absolute left-[120px] sm:left-[230px] md:left-[350px] lg:left-[660px] top-4 sm:top-7 md:top-[60px] lg:top-[100px]"
+            >
+              <div class="">
+                <h6
+                  class="text-[8px] sm:text-xs md:text-sm lg:text-base text-white mb-2 md:mb-5"
+                >
+                  Company Overview
+                </h6>
+                <h4
+                  class="text-[10px] sm:text-sm md:text-base lg:text-xl font-semibold w-[200px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-[100px] sm:h-[110px] md:h-[120px] lg:h-[140px] text-white"
+                >
+                  With more than 30 years of experience, we can provide a wide
+                  variety of products including: Steel Water Tanks, Aquatabs
+                  Inline, Feeders, Drinkers, Incubators, Brooders, Nests,
+                  Transportation Crates and many more.
+                </h4>
+                <p
+                  class="text-[8px] md:text-xs lg:text-sm text-white sm:mb-2 md:mb-8 w-[200px] md:w-[500px] h-7 md:h-[48px]"
+                >
+                  We have mainly exported to our key customers in East Africa
+                  (Kenya, Tanzania & Zambia) but have the capacity and logistics
+                  expertise to send orders globally.
+                </p>
+              </div>
+              <button
+                class="text-[8px] sm:text-xs md:text-sm lg:text-base w-[50px] sm:w-[80px] lg:w-[113px] h-3 sm:h-7 lg:h-[50px] bg-white text-[#008E36]"
+              >
+                Learn more
+              </button>
+            </div>
+          </section>
+        </section>
+        <section class="mt-5 sm:mt-14 md:mt-24 mx-1 md:mx-10 lg:mx-36">
+          <h6 class="text-[#008E36] text-xs sm:text-sm font-bold mb-1 md:mb-5">
+            Product Range
+          </h6>
+          <div class="flex justify-between">
+            <div>
+              <h3
+                class="text-base md:text-2xl lg:text-4xl font-semibold mb-2 lg:mb-7"
+              >
+                Explore our selection of products
+              </h3>
+
+              <p class="text-xs sm:text-sm">
+                Take a closer look and find the perfect fit for your
+                requirements today.
+              </p>
+            </div>
+            <button
+              class="bg-[#008E36] w-[110px] sm:w-[110px] lg:w-[131px] h-5 sm:h-7 lg:h-[50px] text-[10px] sm:text-xs px-1"
+            >
+              View full range
+            </button>
+          </div>
+        </section>
+        <section
+          id="productList"
+          class="grid grid-cols-3 gap-1 md:gap-5 mx-5 md:mx-10 mx-36 mt-5 sm:mt-12"
+        ></section>
+        <section class="h-[550px] sm:h-[700px] md:h-[900px] lg:h-[1060px]">
+          <div
+            class="w-full h-[750px] sm:h-[900px] md:h-[1100px] lg:h-[1234px] relative flex items-center justify-center bottom-48 bg-[linear-gradient(90deg,_#71B742,_#37A849,_#3EA544,_#1C9B47)]"
+          >
+            <div
+              class="h-[200px] sm:h-[300px] md:h-[40px] lg:h-[636px] flex flex-col justify-center items-center"
+            >
+              <h6
+                class="text-[8px] sm:text-xs md:text-sm lg:text-base font-bold text-white mt-24 mb-5"
+              >
+                Global Export Capabilities
+              </h6>
+              <h3
+                class="text-sm sm:text-base md:text-2xl lg:text-4xl font-semibold text-white w-[500px] h-[86px] text-center mb-20"
+              >
+                Serving our Key Customers in East Africa and Beyond
+              </h3>
+              <img
+                src="graph.png"
+                alt="graph"
+                class="w-[300px] sm:w-[600px] md:w-[700px] lg:w-[1300px] lg:h-[636px]"
+              />
+            </div>
+          </div>
+        </section>
+        <section
+          id="adsLogoList"
+          class="flex justify-between items-center mt-10 h-10 lg:h-24 ml-6 lg:ml-20"
+        ></section>
+        <section
+          class="h-[200px] lg:h-[286px] bg-[linear-gradient(90deg,_#71B742,_#37A849,_#3EA544,_#1C9B47)] flex justify-around items-center"
+        >
+          <h3
+            class="text-sm sm:text-base md:text-2xl lg:text-4xl font-semibold text-white w-[300px] md:w-[500px] lg:w-[750px] h-[90px]"
+          >
+            Feel free to reach out to us with any enquiries and to receive an
+            obligation-free quotation.
+          </h3>
+          <button
+            class="text-[#008E36] text-[8px] sm:text-xs md:text-sm lg:text-base font-bold bg-white w-[50px] sm:w-[80px] md:w-[90px] lg:w-[142px] h-5 sm:h-8 md:h-10 lg:h-[60px] mb-2"
+          >
+            Get in touch
+          </button>
+        </section>
+        <section
+          class="bg-[#15161A] overflow-hidden relative h-[140px] sm:h-[200px] md:h-[300px] lg:h-[400px]"
+        >
+          <img
+            src="nav-logo.svg"
+            alt="Logo"
+            class="absolute right-0 opacity-10 w-[100px] sm:w-[200px] md:w-[300px] lg:w-[500px] h-[100px] sm:h-[200px] md:h-[300px] lg:h-[400px]"
+          />
+          <div>
+            <div>
+              <img
+                src="nav-logo.svg"
+                alt="Logo"
+                width="55"
+                height="50"
+                class="mx-2 md:mx-10 lg:mx-32 my-2 sm:my-6 md:my-10 lg:my-24 w-4 sm:w-6 md:w-8 lg:w-12 h-4 sm:h-6 md:h-8 lg:h-12"
+              />
+            </div>
+            <div
+              class="md:flex justify-between items-center mx-2 md:mx-10 lg:mx-32"
+            >
+              <div class="flex mb-2">
+                <div class="mr-14">
+                  <h5
+                    class="text-[#008E36] text-xs sm:text-sm md:text-base lg:text-lg font-bold"
+                  >
+                    Address:
+                  </h5>
+                  <p
+                    class="text-white text-[8px] sm:text-xs md:text-sm lg:text-base"
+                  >
+                    2 The Granary, 39 Charlemont Street, Moy, Dungannon, BT71
+                    7SL
+                  </p>
+                </div>
+                <div class="mr-14">
+                  <h5
+                    class="text-[#008E36] text-xs sm:text-sm md:text-base lg:text-lg font-bold"
+                  >
+                    Phone:
+                  </h5>
+                  <p
+                    class="text-white text-[8px] sm:text-xs md:text-sm lg:text-base"
+                  >
+                    (028) 9099 2999
+                  </p>
+                </div>
+                <div class="mr-14">
+                  <h5
+                    class="text-[#008E36] text-xs sm:text-sm md:text-base lg:text-lg font-bold"
+                  >
+                    Email:
+                  </h5>
+                  <p
+                    class="text-white text-[8px] sm:text-xs md:text-sm lg:text-base"
+                  >
+                    info@websiteni.com
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="fb.svg"
+                  alt="fb_logo"
+                  class="mr-2 size-4 sm:size-6 md:size-8 lg:size-10"
+                />
+                <img
+                  src="insta.svg"
+                  alt="insta_logo"
+                  class="mr-2 size-4 sm:size-6 md:size-8 lg:size-10"
+                />
+                <img
+                  src="youtube.svg"
+                  alt="youtube_logo"
+                  class="mr-2 size-4 sm:size-6 md:size-8 lg:size-10"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
