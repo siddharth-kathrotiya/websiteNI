@@ -54,55 +54,55 @@ document.addEventListener("DOMContentLoaded", function () {
 const productSection = [
   {
     id: 1,
-    img: "steel_tank.jpg",
+    img: "./assets/images/steel_tank.jpg",
     alt: "steel_tank",
     text: "Steel Water Tanks",
   },
   {
     id: 2,
-    img: "Aquatabs.jpg",
+    img: "./assets/images/Aquatabs.jpg",
     alt: "Aquatabs",
     text: "Aquatabs Inline Water Purification",
   },
   {
     id: 3,
-    img: "incubators.jpg",
+    img: "./assets/images/incubators.jpg",
     alt: "incubators",
     text: "Incubators & Brooders",
   },
   {
     id: 4,
-    img: "feeders.jpg",
+    img: "./assets/images/feeders.jpg",
     alt: "feeders",
     text: "Feeders & Drinkers",
   },
   {
     id: 5,
-    img: "nests.jpg",
+    img: "./assets/images/nests.jpg",
     alt: "nests",
     text: "Nests & Slats",
   },
   {
     id: 6,
-    img: "Measurement.jpg",
+    img: "./assets/images/Measurement.jpg",
     alt: "Measurement",
     text: "Measurement",
   },
   {
     id: 7,
-    img: "hatchery.jpg",
+    img: "./assets/images/hatchery.jpg",
     alt: "hatchery",
     text: "Hatchery Equipment",
   },
   {
     id: 8,
-    img: "gen_equipment.jpg",
+    img: "./assets/images/gen_equipment.jpg",
     alt: "gen_equipment",
     text: "General Industrial Equipment",
   },
   {
     id: 9,
-    img: "accessories.jpg",
+    img: "./assets/images/accessories.jpg",
     alt: "accessories",
     text: "Accessories",
   },
@@ -139,32 +139,32 @@ productList.innerHTML = productSection
   const adsLogo = [
     {
       id: 1,
-      img: "evenprod.png",
+      img: "./assets/images/evenprod.png",
       alt: "evenprod",
     },
     {
       id: 2,
-      img: "aquatabs.png",
+      img: "./assets/images/aquatabs.png",
       alt: "aquatabs",
     },
     {
       id: 3,
-      img: "lodiuk.png",
+      img: "./assets/images/lodiuk.png",
       alt: "lodiuk",
     },
     {
       id: 4,
-      img: "kilco.png",
+      img: "./assets/images/kilco.png",
       alt: "kilco",
     },
     {
       id: 5,
-      img: "kersia.png",
+      img: "./assets/images/kersia.png",
       alt: "kersia",
     },
     {
       id: 6,
-      img: "kilco.png",
+      img: "./assets/images/kilco.png",
       alt: "kilco",
     },
   ];
